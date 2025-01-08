@@ -20,9 +20,9 @@ public class Inheritance {
         // if you try to  downcast the object to its type that doesnt belong to
         // then it throws ClassCastException
         //example of classcastexception below
-
         Animal animal1 = new Animal();
         Dog dog2 = (Dog) animal1;
+
 
 
 
