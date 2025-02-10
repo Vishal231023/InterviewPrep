@@ -1,4 +1,4 @@
-package com.codingshuttle.project.uber.uberApp.strategies.impl;
+package InterviewQuestions;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -8,10 +8,11 @@ import java.util.stream.Collectors;
 
 public class Test {
     public static  void main(String[] args) {
-        String s= "vishal";
+        String s= "vishal saxena";
 
         Map<Character,Long> map = s.chars()
                 .mapToObj(ch -> (char) ch)
+                .filter( ch -> ch == 'a')
                 .collect(Collectors.groupingBy(ch -> ch, Collectors.counting()));
 
         System.out.println(map);
