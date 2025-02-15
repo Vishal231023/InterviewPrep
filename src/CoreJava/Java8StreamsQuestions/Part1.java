@@ -12,10 +12,8 @@ public class Part1 {
         //Given a list of integers, write a Java 8 program to separate the odd
         // and even numbers into two separate lists.
 //        List<Integer> numbers = Arrays.asList(10, 21, 30, 43, 50, 67, 88, 91, 100);
-//
-//        Map<Boolean,List<Integer>> ans = numbers.stream()
-//                .collect(Collectors.partitioningBy(number -> number%2==0));
-//
+////
+//        Map<Boolean,List<Integer>> ans = numbers.stream().collect(Collectors.partitioningBy(num -> num %2==0));
 //        List<Integer> evenIntegers = ans.get(Boolean.TRUE);
 //        List<Integer> oddIntegers = ans.get(Boolean.FALSE);
 //
@@ -28,11 +26,9 @@ public class Part1 {
 
 //        List<Integer> numbers = Arrays.asList(1,2,1,3,4,5,2,3,57,8,9,5,9);
 //        HashSet<Integer> set = new HashSet<>();
-
-//        List<Integer> numbersWithoutDuplicates = numbers.stream()
-//                                                    .filter(set::add)
-//                                                       .collect(Collectors.toList());
-
+//
+//        List<Integer> ans = numbers.stream().filter(num -> set.add(num)).toList();
+//        System.out.println(ans);
         // another approach using distinct keyword
 
 //        List<Integer> numbersWithoutDuplicates = numbers.stream()
@@ -44,12 +40,13 @@ public class Part1 {
 //
 //        Write a Java 8 program to find the frequency of each character in a given string using the stream API and collectors.
 
-//        String str = "banana";
+        String str = "banana";
 //
-//        Map<Character,Long> freqChar = str.chars()
-//                .mapToObj(ch -> (char) ch)
-//                .collect(Collectors.groupingBy(ch-> ch,Collectors.counting()));
-//        System.out.println(freqChar);
+        Map<Character,Long> freqChar = str
+                .chars()
+                .mapToObj(ch -> (char)ch)
+                .collect(Collectors.groupingBy(ch->ch,Collectors.counting()));
+        System.out.println(freqChar);
 
 //        Find the frequency of each element in an array or a list
 //
