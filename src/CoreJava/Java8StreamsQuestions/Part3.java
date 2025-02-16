@@ -2,6 +2,7 @@ package CoreJava.Java8StreamsQuestions;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class Part3 {
     public static void main(String[] args) {
@@ -96,11 +97,123 @@ public class Part3 {
 //
 //        Write a Java 8 program to reverse each word of a given string using the stream API and lambda expressions.
 
-        String input = "Hello World Java Streams";
+//        String input = "Hello World Java Streams";
+//
+//        String reverseString = Arrays.stream(input.split("\\s+"))
+//                .map(word -> new StringBuilder(word).reverse().toString())
+//                .collect(Collectors.joining(" "));
+//
+//        System.out.println("ReverseString :" +reverseString);
 
-        String reverseString = Arrays.stream(input.split("\\s+")).map(word -> new StringBuilder(word).reverse().toString()).collect(Collectors.joining(" "));
 
-        System.out.println("ReverseString :" +reverseString);
+//        Find the sum of the first 10 natural numbers
+//
+//        Write a Java 8 program to find the sum of the first 10 natural numbers using streams.
+
+//        int ans = IntStream.range(1,10).sum();
+//        System.out.println(ans);
+
+//        Reverse an integer array
+//
+//        Write a Java 8 program to reverse an integer array.
+
+
+//        int [] nums = {1,23,3,2,4,5};
+//
+//       int [] ans = IntStream.range(0,nums.length).map(num -> nums[nums.length-num-1]).toArray();
+//        System.out.println(Arrays.toString(ans));
+
+//        Print the first 10 even numbers
+//
+//        Write a Java 8 program to print the first 10 even numbers.
+
+//        int [] ans = IntStream
+//                .rangeClosed(1,10)
+//                .map(n -> n*2).toArray();
+//
+//        System.out.println(Arrays.toString(ans));
+//
+//       int [] ansList = IntStream.iterate(2,n -> n+2).limit(10).toArray();
+//
+//        System.out.println(Arrays.toString(ansList));
+
+//        Find the most repeated element in an array
+//
+//        Write a Java 8 program to find the most repeated element in an array.
+
+//        int[] array = {1, 3, 2, 3, 4, 5, 3, 2, 2, 2, 2, 5, 6, 2, 2};
+//
+//        List<Integer> list = Arrays.stream(array).boxed().toList();
+//
+//        Integer ans = list.stream()
+//                .collect(Collectors.groupingBy(num -> num, Collectors.counting()))
+//                .entrySet()
+//                .stream()
+//                .max(Map.Entry.comparingByValue())
+//                .map(entry -> entry.getKey())
+//                .orElse(null);
+//
+//        System.out.println(ans);
+
+//        Check if a string is a palindrome using Java 8 streams
+//
+//        Write a Java 8 program to check if a given string is a palindrome using the stream API and lambda expressions.
+
+//        String strCaseSensitive = "Madam";
+//        String str = strCaseSensitive.replaceAll("[^a-zA-Z0-9]","").toLowerCase();
+//
+//        boolean isPalindrome = IntStream.
+//                range(0,str.length()/2)
+//                .allMatch(i -> str.charAt(i) == str.charAt(str.length()-i-1));
+//
+//        System.out.println(isPalindrome);
+
+//        Find strings in a list that start with a number
+//
+//        Given a list of strings, write a Java 8 program to find the strings that start with a number.
+
+//        List<String> words = Arrays.asList("123apple", "banana", "7up", "42life", "hello", "99problems", "test");
+//
+//        List<String> wordStartingWithDigit = words.stream().filter(word -> Character.isDigit(word.charAt(0))).toList();
+//
+//        System.out.println(wordStartingWithDigit);
+
+//        Extract duplicate elements from an array
+//
+//        Write a Java 8 program to extract duplicate elements from an array.
+//
+
+//        List<Integer> integers = Arrays.asList(1,2,3,4,5,6,1,2,3,4);
+//
+//        List<Integer> dupIntegers = integers
+//                .stream()
+//                .collect(Collectors.groupingBy(number -> number, Collectors.counting()))
+//                .entrySet()
+//                .stream()
+//                .filter(entry -> entry.getValue() >= 2)
+//                .map(Map.Entry::getKey)
+//                .toList();
+//
+//        System.out.println(dupIntegers);
+
+//        Print duplicate characters in a string
+//
+//        Write a Java 8 program to print the duplicate characters in a string.
+
+//        String str = "programming";
+//
+//        List<Character> ans = str.chars()
+//                .mapToObj(ch -> (char) ch).collect(Collectors.groupingBy(number -> number, Collectors.counting()))
+//                .entrySet()
+//                .stream()
+//                .filter(entry -> entry.getValue() >= 2)
+//                .map(Map.Entry::getKey)
+//                .toList();
+//
+//        System.out.println(ans);
+
+
+
 
 
 
